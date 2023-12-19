@@ -1,0 +1,12 @@
+{
+  "dbMachine": "localhost",
+  "dbPort": 3306,
+  "dbUsername": "test1",
+  "dbPassword": "test1",
+  "dbDatabase": "test1",
+  "context": "/api1",
+  "port": "0.0.0.0:3001",
+  "accessRight" : "media",
+  "authURL" : "https://cbox.info/authapi/loginNoToken",
+  "secondsTokenValid": 1200
+}

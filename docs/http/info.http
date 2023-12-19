@@ -1,0 +1,188 @@
+###
+POST http://localhost:3001/api1/accountReport
+Content-Type: application/json
+Authorization: 05813a52f71149af9aab56f941bf6a42
+
+{
+  "start": "jan 1, 2023",
+  "end": "jan 9, 2055",
+  "accountId": "71522971-31f3-4116-9665-9cea56794727"
+}
+
+###
+POST http://localhost:3001/api1/trialBalanceReport
+Content-Type: application/json
+Authorization: 0d184af83023494180044d0b86e89bbb
+
+{
+  "start": "jan 10, 2023",
+  "end": "dec 31, 2023",
+  "companyId": "dedc262f-8c9e-45db-b017-4caffff0394d"
+}
+
+### Send POST request with json body
+POST http://localhost:3001/api1/login
+Content-Type: application/json
+
+{
+  "login": "test",
+  "password": "test12"
+}
+
+### Send POST request with json body
+POST http://localhost:3001/api1/logout
+Content-Type: application/json
+Authorization: 130e895e10474319afc7389426ec904c
+
+### Send POST request with json body
+POST http://localhost:3001/company
+Content-Type: application/json
+Authorization: 022b7bad19a6416ca300175ad702d43e
+
+{
+  "adding": false,
+  "company": {
+    "companyId": "1",
+    "userId": "a283ca0c13054a139b40947d7c6cc04c",
+    "name": "mod alfa limited",
+    "month": 11,
+    "day": 30
+  }
+}
+
+### get all companies
+GET http://localhost:3001/companies
+Content-Type: application/json
+Authorization: f85176dcebd44a1a9eb5810f4c36a973
+
+### get all account types
+GET http://localhost:3001/accountType
+Content-Type: application/json
+Authorization: 082128e508974efd87e4cbe80c29b711
+
+#### delete accounts
+POST http://localhost:3001/deleteAccounts
+Authorization: fdb49eba02e1473bbf8c2c60e480f1dc
+Content-Type: application/json
+
+{
+  "ids": ["1", "2", "3", "4"]
+}
+
+#### get all the accounts
+GET http://localhost:3001/loadAccounts/1
+Authorization: d10717c339fe4d52aa60f8ab5a1dd024
+
+#### delete companies
+POST http://localhost:3001/deleteCompanies
+Authorization: 02de9d62f6814b6eb98bb3e19d05fc1f
+Content-Type: application/json
+
+{
+  "ids": ["2"]
+}
+
+#### delete transactions
+POST http://localhost:3001/deleteTransactions
+Authorization: 83f33ec6fae6454498dd49ffa61efba8
+Content-Type: application/json
+
+{
+  "ids": ["2", "5"]
+}
+
+#### search accounts
+POST http://localhost:3001/searchAccounts
+Authorization: 0c5264fd9caf48c2a9f73c6fecc63680
+Content-Type: application/json
+
+{
+  "companyId": "1",
+  "search":"acc3"
+}
+
+### insert account
+POST http://localhost:3001/updateAccount
+Authorization: b85110c198c64b29a9e97fab8490ecfd
+Content-Type: application/json
+
+{
+  "adding": true,
+  "account": {
+    "accountId": "alfa",
+    "code" : "beta",
+    "name" : "dogea",
+    "accountTypeCd" : "liability",
+    "companyId" : "1"
+  }
+}
+
+### search transaction
+POST http://localhost:3001/searchTransactions
+Authorization: 4cca7e8ed9704b3d95073470d84015b7
+Content-Type: application/json
+
+{
+  "companyId": "1",
+  "search": "alfa"
+}
+
+### the other one
+POST http://localhost:3001/updateTransaction
+Authorization: 4cca7e8ed9704b3d95073470d84015b7
+Content-Type: application/json
+
+{
+  "adding": false,
+  "transaction": {
+    "transactionId": "1",
+    "companyId": "1",
+    "transactionDate": "20230512",
+    "sequence": 1,
+    "comments": "comment 1 modified",
+    "positions": [
+      {
+        "transactionPositionId": "1",
+        "transactionId": "1",
+        "accountId": "1",
+        "sequence": 1,
+        "debit": 12.0,
+        "credit": 0.0,
+        "comments": "item1 modified"
+      },
+      {
+        "transactionPositionId": "2",
+        "transactionId": "1",
+        "accountId": "2",
+        "sequence": 1,
+        "debit": 0.0,
+        "credit": 12.0,
+        "comments": "item2"
+      }
+    ]
+  }
+}
+
+### the other one
+POST https://cbox.info/accbackend/login
+Content-Type: application/json
+
+{
+  "login": "test",
+  "password": "test12"
+}
+
+### the other one
+GET https://cbox.info/accbackend
+Content-Type: application/json
+
+###
+POST http://localhost:3001/api1/excelReport
+Content-Type: application/json
+Authorization: 5cefaad741894907abd5a9868767eb1b
+
+{
+  "start": "jan 1, 2023",
+  "end": "feb 1, 2024",
+  "companyId": "883e1755-30e4-403e-ab6e-0ae1354e11b6"
+}

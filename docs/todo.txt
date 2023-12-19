@@ -1,0 +1,24 @@
+done export const getCompanies = async (id: string): Promise<CompanyData[]> => {
+done export const loginUser = async (data: LoginData): Promise<UserData> => {
+done export const updateCompany = async (adding: boolean, data: CompanyData) => {
+done export const getAccountTypes = async (): Promise<AccountTypeData[]> => {
+done export const deleteAccounts = async (ids: string[]) => {
+done export const loadAccounts = async (companyId: string) : Promise<AccountData []> => {
+done export const deleteCompanies = async (ids: string[]) => {
+done export const deleteTransactions = async(ids: string[]) => {
+done export const doSearchAccounts = async (search: string): Promise<AccountData[]> => {
+done export const updateAccount = async (adding: boolean, data: AccountData) => {
+done export const searchTransactions = async (search: string) : Promise<TransactionData[]> => {
+
+export const updateTransaction = async(adding: boolean, data: TransactionData) =>{
+
+hook the client to the service
+validate token should push the date forward
+validate transaction balances
+validate transaction does not have two accounts in positions
+validate transaction has at least two positions
+validate txn has debit and credit bigger than zero
+search by amount
+search by date
+search by comments
+searcy by account maybe

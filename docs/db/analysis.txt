@@ -1,0 +1,57 @@
+database:
+
+- session
+- user
+- company
+- account
+- transaction
+- trans_position
+- account_type -> referential integrity for our account types - asset, liability, equity
+- balance_type - the balance type of that
+
+user -> multiple companies -> multiple accounts
+the account_type is hardcoded and shall be used by multiple companies
+
+user:
+- id
+- providedId
+- login
+- name
+
+company
+- company_id
+- user_id
+- name
+- month end
+- day end
+
+session
+- session_id
+- user_id
+- token
+- expire_dt
+- expired_ind
+
+account_type
+- account_cd
+- name
+- balance_cd
+
+balance_type
+- balance_cd - credit, debit or both
+- name
+
+transaction
+- transaction_id
+- date
+- sequencet
+- comments
+
+transaction_position
+- id
+- transaction_id
+- sequence
+- account_id
+- debit_amount
+- credit_amount
+- comments
